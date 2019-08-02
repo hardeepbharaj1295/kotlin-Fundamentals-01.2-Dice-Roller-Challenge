@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         val button: Button = findViewById(R.id.roll_button)
         val countUp: Button = findViewById(R.id.count_up)
+        val reset: Button = findViewById(R.id.reset)
         val resultText: TextView = findViewById(R.id.result_text)
 
         button.setOnClickListener {
@@ -33,6 +34,10 @@ class MainActivity : AppCompatActivity() {
                 val data = resultText.text.toString().toInt() + 1
                 result_text.text = data.toString()
             }
+        }
+
+        reset.setOnClickListener {
+            result_text.text = "0"
         }
     }
 
